@@ -1,25 +1,36 @@
 #include "QDivination.h"
 #include "calendar.h"
+#include "InputHexagramDlg.h"
+#include <qdatetime.h>
 
 
 QDivination::QDivination(QWidget *parent)
 	: QMainWindow(parent)
 {
 	ui.setupUi(this);
-	XXInfo info;
-	for (int i = 0; i < 6; i++)
+	connect(ui.actNew, SIGNAL(triggered()), this, SLOT(onNewDocument()));
+}
+
+void QDivination::onNewDocument()
+{
+	InputHexagramDlg dlg(this);
+	if (dlg.exec() == QDialog::Accepted)
 	{
-		info.xxSymbol[i] = ShaoYang;
+		QDateTime dtTime = dlg.getInputDateTime();
+		XXInfo info = dlg.getInputXXInfo();
+		DataTime dataTime;
+		dataTime.year = dtTime.date().year();
+		dataTime.month = dtTime.date().month();
+		dataTime.day = dtTime.date().day();
+		dataTime.hour = dtTime.time().hour();
+		dataTime.minute = dtTime.time().minute();
+		dataTime.second = dtTime.time().second();
+		divineInfo = new DivineInfo(&info, &dataTime, Man);
+
+
 	}
-	
-	DataTime dataTime;
-	dataTime.year = 2018;
-	dataTime.month = 3;
-	dataTime.day = 5;
-	dataTime.hour = 15;
-	dataTime.minute = 03;
-	dataTime.second = 0;
+	else
+	{
 
-	divineInfo = new DivineInfo(&info, &dataTime, Man);
-
+	}
 }

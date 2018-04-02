@@ -60,14 +60,23 @@
     <ClCompile Include="DivinaBase.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="InputHexagramDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="QDivination.h">
       <Filter>Header Files</Filter>
     </QtMoc>
+    <QtMoc Include="InputHexagramDlg.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="QDivination.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="InputHexagramDlg.ui">
       <Filter>Form Files</Filter>
     </QtUic>
   </ItemGroup>

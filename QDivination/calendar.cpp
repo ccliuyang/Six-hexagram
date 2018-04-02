@@ -754,7 +754,7 @@ void DivineInfo::CalcHexagram()
 		}
 		if (m_xxInfo.xxSymbol[i] == LaoYang)
 			sup_s[i] = xxYin;
-		else
+		else if(m_xxInfo.xxSymbol[i] == LaoYin)
 			sup_s[i] = xxYang;
 	}
 

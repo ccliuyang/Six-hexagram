@@ -12,6 +12,9 @@ class QDivination : public QMainWindow
 public:
 	QDivination(QWidget *parent = Q_NULLPTR);
 
+private slots:
+	void onNewDocument();
+
 private:
 	Ui::QDivinationClass ui;
 	DivineInfo *divineInfo;

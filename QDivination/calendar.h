@@ -326,7 +326,7 @@ typedef struct
 class DivineInfo
 {
 public:
-	DivineInfo(XXInfo* xxInfo, DataTime* dataTime, Sex sex);
+	DivineInfo(XXInfo* xxInfo, DataTime* dataTime, Sex sex = Man);
 
 	~DivineInfo() {};
 

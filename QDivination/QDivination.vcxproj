@@ -116,6 +116,7 @@
   <ItemGroup>
     <ClCompile Include="calendar.cpp" />
     <ClCompile Include="DivinaBase.cpp" />
+    <ClCompile Include="InputHexagramDlg.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="QDivination.cpp" />
     <ClCompile Include="rili\eph.cpp" />
@@ -128,6 +129,7 @@
     <QtMoc Include="QDivination.h" />
   </ItemGroup>
   <ItemGroup>
+    <QtUic Include="InputHexagramDlg.ui" />
     <QtUic Include="QDivination.ui" />
   </ItemGroup>
   <ItemGroup>
@@ -139,6 +141,7 @@
   <ItemGroup>
     <ClInclude Include="calendar.h" />
     <ClInclude Include="DivinaBase.h" />
+    <QtMoc Include="InputHexagramDlg.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

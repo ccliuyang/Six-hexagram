@@ -1,4 +1,5 @@
 <RCC>
-    <qresource prefix="QDivination">
+    <qresource prefix="/QDivination">
+        <file>image/guize.jpg</file>
     </qresource>
 </RCC>
