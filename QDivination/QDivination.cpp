@@ -8,6 +8,8 @@ QDivination::QDivination(QWidget *parent)
 	: QMainWindow(parent)
 {
 	ui.setupUi(this);
+	setWindowFlags(Qt::FramelessWindowHint);
+
 	connect(ui.actNew, SIGNAL(triggered()), this, SLOT(onNewDocument()));
 }
 
@@ -18,7 +20,7 @@ void QDivination::onNewDocument()
 	{
 		QDateTime dtTime = dlg.getInputDateTime();
 		XXInfo info = dlg.getInputXXInfo();
-		DataTime dataTime;
+		DateTime dataTime;
 		dataTime.year = dtTime.date().year();
 		dataTime.month = dtTime.date().month();
 		dataTime.day = dtTime.date().day();

@@ -6,22 +6,37 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>776</width>
-    <height>492</height>
+    <width>719</width>
+    <height>503</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>QDivination</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <layout class="QVBoxLayout" name="verticalLayout_4"/>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>　　　　　　　　　　 兑宫：地山谦 　　　　　 震宫：雷地豫
+六神 　伏神　　 　　【主　卦】 　　　　　 　   　【变　卦】　	
+白虎 　　　　　　　 ▅▅　▅▅ 兄弟癸酉金 　　 　 ▅▅　▅▅ 父母庚戌土 　　	
+螣蛇 　　　　　　　 ▅▅　▅▅ 子孙癸亥水 　世 　 ▅▅　▅▅ 兄弟庚申金
+勾陈 　　　　　　　 ▅▅　▅▅ 父母癸丑土 　　 Ⅹ ▅▅▅▅▅ 官鬼庚午火 　应 　　	
+朱雀 　　　　　　　 ▅▅▅▅▅ 兄弟丙申金 　　 〇 ▅▅　▅▅ 妻财乙卯木 　　	
+青龙 　妻财丁卯木　 ▅▅　▅▅ 官鬼丙午火 　应 　 ▅▅　▅▅ 官鬼乙巳火
+玄武 　　　　　　　 ▅▅　▅▅ 父母丙辰土 　　 　 ▅▅　▅▅ 父母乙未土 　世 　　</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>776</width>
+     <width>719</width>
      <height>23</height>
     </rect>
    </property>

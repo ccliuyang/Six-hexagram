@@ -114,10 +114,18 @@
     </QtRcc>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="BaGua.cpp" />
     <ClCompile Include="calendar.cpp" />
+    <ClCompile Include="cdatetime.cpp" />
+    <ClCompile Include="cguainfo.cpp" />
+    <ClCompile Include="ctitlebar.cpp" />
     <ClCompile Include="DivinaBase.cpp" />
+    <ClCompile Include="document.cpp" />
+    <ClCompile Include="editor.cpp" />
+    <ClCompile Include="guawidget.cpp" />
     <ClCompile Include="InputHexagramDlg.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="maindlg.cpp" />
     <ClCompile Include="QDivination.cpp" />
     <ClCompile Include="rili\eph.cpp" />
     <ClCompile Include="rili\JD.cpp" />
@@ -130,6 +138,7 @@
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="InputHexagramDlg.ui" />
+    <QtUic Include="maindlg.ui" />
     <QtUic Include="QDivination.ui" />
   </ItemGroup>
   <ItemGroup>
@@ -139,8 +148,16 @@
     <ResourceCompile Include="QDivination.rc" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BaGua.h" />
     <ClInclude Include="calendar.h" />
+    <QtMoc Include="guawidget.h" />
+    <QtMoc Include="ctitlebar.h" />
+    <ClInclude Include="cdatetime.h" />
+    <ClInclude Include="cguainfo.h" />
     <ClInclude Include="DivinaBase.h" />
+    <QtMoc Include="maindlg.h" />
+    <QtMoc Include="editor.h" />
+    <QtMoc Include="document.h" />
     <QtMoc Include="InputHexagramDlg.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

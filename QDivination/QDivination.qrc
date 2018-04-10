@@ -1,5 +1,18 @@
 <RCC>
     <qresource prefix="/QDivination">
         <file>image/guize.jpg</file>
+        <file>qss/black.css</file>
+        <file>image/sysbtn_close_hover.png</file>
+        <file>image/sysbtn_close_normal.png</file>
+        <file>image/sysbtn_close_pressed.png</file>
+        <file>image/sysbtn_max_hover.png</file>
+        <file>image/sysbtn_max_normal.png</file>
+        <file>image/sysbtn_max_pressed.png</file>
+        <file>image/sysbtn_menu_hover.png</file>
+        <file>image/sysbtn_menu_normal.png</file>
+        <file>image/sysbtn_menu_pressed.png</file>
+        <file>image/sysbtn_min_hover.png</file>
+        <file>image/sysbtn_min_normal.png</file>
+        <file>image/sysbtn_min_pressed.png</file>
     </qresource>
 </RCC>
