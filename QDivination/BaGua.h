@@ -249,6 +249,8 @@ typedef struct
 }HexagramProperty;
 
 
+
+
 // 五行相生相克
 extern WuXing GetWuXingSheng(WuXing value);
 extern WuXing GetWuXingKe(WuXing value);

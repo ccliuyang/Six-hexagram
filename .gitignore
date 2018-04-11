@@ -242,3 +242,5 @@ ModelManifest.xml
 .fake/
 *.exe
 /.vscode
+/Win32
+/QDivination/GeneratedFiles

@@ -32,12 +32,7 @@ typedef struct
 	TianGanDiZhi	tdDay;		// 日天干
 }NLDateTime;
 
-typedef struct
-{
-	TianGanDiZhi	tdYear;		// 年天干
-	TianGanDiZhi	tdMonth;	// 月天干
-	TianGanDiZhi	tdDay;		// 日天干
-}TDDateTime;
+
 
 // 性别
 typedef enum

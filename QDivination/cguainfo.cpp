@@ -1,25 +1,13 @@
 #include "cguainfo.h"
+#include "BaGua.h"
 
-CGuaInfo::CGuaInfo(XXInfo * xxInfo, DateTime * dtTime)
-{
-	for(int i = 0; i < 6; i++)
-		m_xxInfo.xxSymbol[i] = xxInfo->xxSymbol[i];
-	setDateTime(dtTime);
-}
-
-CGuaInfo::CGuaInfo(XXInfo * xxInfo, NLDateTime * dtTime)
+CGuaInfo::CGuaInfo(XXInfo * xxInfo, CDateTime * dtTime) : m_tdTime(dtTime)
 {
 	for (int i = 0; i < 6; i++)
 		m_xxInfo.xxSymbol[i] = xxInfo->xxSymbol[i];
-	setDateTime(dtTime);
+	GetHexagramProperty(&m_xxInfo, &m_majorHex, &m_subHex);
 }
 
-CGuaInfo::CGuaInfo(XXInfo * xxInfo, TDDateTime * dtTime)
-{
-	for (int i = 0; i < 6; i++)
-		m_xxInfo.xxSymbol[i] = xxInfo->xxSymbol[i];
-	setDateTime(dtTime);
-}
 
 CGuaInfo::~CGuaInfo()
 {
@@ -33,30 +21,5 @@ bool CGuaInfo::hasSubHex()
 			return true;
 	}
 	return false;
-}
-
-void CGuaInfo::setDateTime(DateTime * dtTime)
-{
-	Lunar lunar;
-	Month month = lunar.yueLiCalc(dtTime->year, dtTime->month);
-	std::vector<Day>& days = month.days;
-	for (auto it = days.begin(); it != days.end(); ++it)
-	{
-		Day& day = (*it);
-		if (day.d != dtTime->day)
-			continue;
-		else
-		{
-
-		}
-	}
-}
-
-void CGuaInfo::setDateTime(NLDateTime * dtTime)
-{
-}
-
-void CGuaInfo::setDateTime(TDDateTime * dtTime)
-{
 }
 
