@@ -1,7 +1,7 @@
 #pragma once
 
 #include "BaGua.h"
-
+#include "cdatetime.h"
 
 #include <list>
 #include <map>
@@ -12,15 +12,7 @@ using namespace std;
 
 // 时间(年月日), 用神, 求事, 六爻
 
-typedef struct
-{
-	int			  year;		// 年
-	unsigned char month;	// 月
-	unsigned char day;		// 日
-	unsigned char hour;		// 时
-	unsigned char minute;	// 分
-	unsigned char second;	// 秒
-}DateTime;
+
 
 typedef struct
 {

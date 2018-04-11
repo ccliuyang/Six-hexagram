@@ -5,6 +5,7 @@
 GuaWidget::GuaWidget(QWidget *parent)
 	: QWidget(parent)
 {
+	
 }
 
 GuaWidget::~GuaWidget()
@@ -13,6 +14,8 @@ GuaWidget::~GuaWidget()
 
 void GuaWidget::setGuaInfo(CGuaInfo * pInfo)
 {
+
+	this->update();
 }
 
 

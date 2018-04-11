@@ -123,10 +123,8 @@
     <ClCompile Include="document.cpp" />
     <ClCompile Include="editor.cpp" />
     <ClCompile Include="guawidget.cpp" />
-    <ClCompile Include="InputHexagramDlg.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="maindlg.cpp" />
-    <ClCompile Include="QDivination.cpp" />
     <ClCompile Include="rili\eph.cpp" />
     <ClCompile Include="rili\JD.cpp" />
     <ClCompile Include="rili\lunar.cpp" />
@@ -134,12 +132,7 @@
     <ClCompile Include="rili\tools.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <QtMoc Include="QDivination.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <QtUic Include="InputHexagramDlg.ui" />
     <QtUic Include="maindlg.ui" />
-    <QtUic Include="QDivination.ui" />
   </ItemGroup>
   <ItemGroup>
     <QtRcc Include="QDivination.qrc" />
@@ -158,7 +151,6 @@
     <QtMoc Include="maindlg.h" />
     <QtMoc Include="editor.h" />
     <QtMoc Include="document.h" />
-    <QtMoc Include="InputHexagramDlg.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
@@ -168,7 +160,7 @@
   </ImportGroup>
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties MocDir=".\GeneratedFiles\$(ConfigurationName)" UicDir=".\GeneratedFiles" RccDir=".\GeneratedFiles" lupdateOptions="" lupdateOnBuild="0" lreleaseOptions="" Qt5Version_x0020_Win32="msvc2015" MocOptions="" />
+      <UserProperties MocDir=".\GeneratedFiles\$(ConfigurationName)" UicDir=".\GeneratedFiles" RccDir=".\GeneratedFiles" lupdateOptions="" lupdateOnBuild="0" lreleaseOptions="" Qt5Version_x0020_Win32="$(DefaultQtVersion)" MocOptions="" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>

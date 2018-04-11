@@ -69,10 +69,15 @@ static SixAnimalProperty animalProperty[] =
 	{ XuanWu , "玄武" }
 };
 
-
-
-
-
+std::string GetAnimalName(SixAnimal value)
+{
+	for (int i = 0; i < sizeof(animalProperty) / sizeof(animalProperty[0]); i++)
+	{
+		if (animalProperty[i].animal == value)
+			return  animalProperty[i].animalName;
+	}
+	return std::string();
+}
 static HexagramProperty hexgramProperty[] =
 {
 	// 卦枚举		卦名	 五行	 世爻	应爻	
@@ -591,6 +596,24 @@ static HexagramProperty hexgramProperty[] =
 
 
 
+static WuXingProperty wxProperty[] = 
+{
+	{WX_Jin, "金"},
+	{WX_Mu, "木"},
+	{WX_Shui, "水"},
+	{WX_Huo, "火"},
+	{WX_Tu, "土"}
+};
+std::string GetWuXingName(WuXing value)
+{
+	for (int i = 0; i < sizeof(wxProperty) / sizeof(wxProperty[0]); i++)
+	{
+		if (wxProperty[i].wx == value)
+			return wxProperty[i].wxName;
+	}
+	return std::string();
+}
+
 // 五行相生
 WuXing GetWuXingSheng(WuXing value)
 {
@@ -628,6 +651,24 @@ WuXing GetWuXingKe(WuXing value)
 	return WX_Max;
 }
 
+static SixRelativeProperty srProperty[] = 
+{
+	{ FuMu , "父母"},
+	{ XiongDi , "兄弟"},
+	{ GuanGui , "官鬼"},
+	{ QiCai , "妻财"},
+	{ ZiSun , "子孙"}
+};
+
+std::string GetSixRelativeName(SixRelative value)
+{
+	for (int i = 0; i < sizeof(srProperty) / sizeof(srProperty[0]); i++)
+	{
+		if (value == srProperty[i].sr)
+			return srProperty[i].srName;
+	}
+	return std::string();
+}
 // 六亲生
 SixRelative GetSixRelativeSheng(SixRelative value)
 {
@@ -845,11 +886,34 @@ HeavenlySteam GetHeavenlySteam(unsigned char index)
 	return hsProperty[index].hsName;
 }
 
+string GetHeavenlyName(HeavenlySteam value)
+{
+	for (int i = 0; i < sizeof(hsProperty) / sizeof(hsProperty[0]); i++)
+	{
+		if (value == hsProperty[i].hsName)
+		{
+			return hsProperty[i].hsNameStr;
+		}
+	}
+	return string();
+}
+
 EarthlyBranch GetEarthlyBranch(unsigned char index)
 {
 	return ebProperty[index].ebName;
 }
 
+string GetEarthlyName(EarthlyBranch value)
+{
+	for (int i = 0; i < sizeof(ebProperty) / sizeof(ebProperty[0]); i++)
+	{
+		if (value == ebProperty[i].ebName)
+		{
+			return ebProperty[i].ebNameStr;
+		}
+	}
+	return string();
+}
 void GetXunKong(TianGanDiZhi tdDay, EarthlyBranch * k1, EarthlyBranch * k2)
 {
 	// 获取当前所在旬

@@ -1,12 +1,7 @@
 #include "calendar.h"
 #include <vector>
 #include <iostream>
-
-//static HeavenlySteam hsInfo[] = { HS_Jia , HS_Yi , HS_Bing , HS_Ding , HS_Wu , HS_Ji , HS_Geng , HS_Xin , HS_Ren , HS_Gui };
-
-
-
-
+#include "cdatetime.h"
 
 DivineInfo::DivineInfo(XXInfo * xxInfo, DateTime* dataTime, Sex sex)
 {

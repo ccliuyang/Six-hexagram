@@ -1,5 +1,8 @@
 #pragma once
 
+#include <string>
+
+
 // 六十四卦
 typedef enum
 {
@@ -77,6 +80,7 @@ typedef enum
 	HEX_Max
 }Hexagram;
 
+
 // 六亲
 typedef enum
 {
@@ -87,6 +91,13 @@ typedef enum
 	ZiSun,		// 子孙
 	RelativeMax
 }SixRelative;
+
+typedef struct
+{
+	SixRelative sr;
+	std::string srName;
+}SixRelativeProperty;
+
 
 typedef enum
 {
@@ -129,6 +140,13 @@ typedef enum
 	WX_Tu,		// 土
 	WX_Max,		// 不在五行中
 }WuXing;
+
+typedef struct
+{
+	WuXing wx;
+	std::string wxName;
+}WuXingProperty;
+
 
 // 十天干
 typedef enum
@@ -215,7 +233,7 @@ typedef enum
 typedef struct
 {
 	SixAnimal animal;
-	char 	animalStr[255];
+	std::string animalName;
 }SixAnimalProperty;
 
 
@@ -252,8 +270,8 @@ typedef struct
 
 
 // 五行相生相克
-extern WuXing GetWuXingSheng(WuXing value);
-extern WuXing GetWuXingKe(WuXing value);
+WuXing GetWuXingSheng(WuXing value);
+WuXing GetWuXingKe(WuXing value);
 
 // 六亲相生相克
 SixRelative GetSixRelativeSheng(SixRelative value);
@@ -291,3 +309,8 @@ SixAnimalInfo GetSixAnimalInfo(TianGanDiZhi tdDay);
 // 获得主卦变卦
 void GetHexagramProperty(XXInfo *pxxInfo, HexagramProperty* majorHex, HexagramProperty* subHex);
 
+std::string GetHeavenlyName(HeavenlySteam value);
+std::string GetEarthlyName(EarthlyBranch value);
+std::string GetAnimalName(SixAnimal value);
+std::string GetSixRelativeName(SixRelative value);
+std::string GetWuXingName(WuXing value);

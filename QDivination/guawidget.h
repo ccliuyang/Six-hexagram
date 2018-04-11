@@ -13,6 +13,8 @@ public:
 	~GuaWidget();
 	void setGuaInfo(CGuaInfo* pInfo);
 
+	friend class CGuaInfo;
+
 
 protected:
 	virtual void paintEvent(QPaintEvent* event);

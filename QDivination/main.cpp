@@ -1,4 +1,3 @@
-#include "QDivination.h"
 #include <QtWidgets/QApplication>
 #include <qfile.h>
 #include "maindlg.h"

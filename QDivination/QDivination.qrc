@@ -14,5 +14,11 @@
         <file>image/sysbtn_min_hover.png</file>
         <file>image/sysbtn_min_normal.png</file>
         <file>image/sysbtn_min_pressed.png</file>
+        <file>image/radio_normal.png</file>
+        <file>image/radio_selected.png</file>
+        <file>image/add_bottom.png</file>
+        <file>image/add_left.png</file>
+        <file>image/add_right.png</file>
+        <file>image/add_top.png</file>
     </qresource>
 </RCC>
