@@ -119,10 +119,9 @@
     <ClCompile Include="cdatetime.cpp" />
     <ClCompile Include="cguainfo.cpp" />
     <ClCompile Include="ctitlebar.cpp" />
-    <ClCompile Include="DivinaBase.cpp" />
+    <ClCompile Include="DivineAbstract.cpp" />
     <ClCompile Include="document.cpp" />
     <ClCompile Include="editor.cpp" />
-    <ClCompile Include="guawidget.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="maindlg.cpp" />
     <ClCompile Include="rili\eph.cpp" />
@@ -143,11 +142,10 @@
   <ItemGroup>
     <ClInclude Include="BaGua.h" />
     <ClInclude Include="calendar.h" />
-    <QtMoc Include="guawidget.h" />
+    <ClInclude Include="DivineAbstract.h" />
     <QtMoc Include="ctitlebar.h" />
     <ClInclude Include="cdatetime.h" />
     <ClInclude Include="cguainfo.h" />
-    <ClInclude Include="DivinaBase.h" />
     <QtMoc Include="maindlg.h" />
     <QtMoc Include="editor.h" />
     <QtMoc Include="document.h" />

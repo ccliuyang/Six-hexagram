@@ -8,6 +8,7 @@
 namespace Ui { class MainDlg; };
 
 class CGuaInfo;
+class DivineAbstract;
 
 class MainDlg : public QDialog
 {
@@ -44,4 +45,6 @@ private:
 	QMenu* menu;
 
 	CGuaInfo *m_guaInfo;
+	DivineAbstract* m_guaDivine;
+
 };

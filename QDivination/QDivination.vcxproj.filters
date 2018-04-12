@@ -54,9 +54,6 @@
     <ClCompile Include="rili\tools.cpp">
       <Filter>rili</Filter>
     </ClCompile>
-    <ClCompile Include="DivinaBase.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="document.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -69,9 +66,6 @@
     <ClCompile Include="ctitlebar.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="guawidget.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="cguainfo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -79,6 +73,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="BaGua.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DivineAbstract.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -93,9 +90,6 @@
       <Filter>Header Files</Filter>
     </QtMoc>
     <QtMoc Include="ctitlebar.h">
-      <Filter>Header Files</Filter>
-    </QtMoc>
-    <QtMoc Include="guawidget.h">
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>
@@ -116,9 +110,6 @@
     <ClInclude Include="calendar.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="DivinaBase.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="cguainfo.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -126,6 +117,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="BaGua.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DivineAbstract.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

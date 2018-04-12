@@ -19,6 +19,8 @@ private:
 
 
 private:
+	friend class DivineAbstract;
+
 	HexagramProperty m_majorHex;	// 主卦
 	HexagramProperty m_subHex;		// 变卦
 	XXInfo			 m_xxInfo;		// 卦爻信息

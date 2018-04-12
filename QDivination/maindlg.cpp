@@ -5,6 +5,7 @@
 #include <qmessagebox.h>
 #include "cdatetime.h"
 #include "cguainfo.h"
+#include "DivineAbstract.h"
 
 MainDlg::MainDlg(QWidget *parent)
 	: QDialog(parent)
@@ -111,6 +112,7 @@ void MainDlg::onStart()
 
 	m_guaInfo = new CGuaInfo(&info, &dateTime);
 	ui->textBrowser->setText(QString::fromLocal8Bit(m_guaInfo->getGuaInfo().c_str()));
+	m_guaDivine = new DivineAbstract(m_guaInfo);
 
 //	ui->textBrowser->setText()
 

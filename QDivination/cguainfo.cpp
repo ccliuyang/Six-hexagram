@@ -53,9 +53,6 @@ std::string CGuaInfo::getGuaInfo()
 
 	str.append(tmp);
 
-
-
-
 	str.append("         ");
 	memset(tmp, 0, sizeof(tmp));
 	sprintf(tmp, "%s:%s", getGuaGong(m_majorHex.hexagram).c_str(), m_majorHex.ucName);
