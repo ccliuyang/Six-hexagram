@@ -707,6 +707,38 @@ SixRelative GetSixRelativeKe(SixRelative value)
 	return RelativeMax;
 }
 
+SixRelative GetSixRelativeByWuXing(WuXing wxValue, EarthlyBranch ebValue)
+{
+	WuXing ebWx = GetEarthlyBranchWuXing(ebValue);
+	if (wxValue == ebWx)	
+	{
+		// 比肩者兄弟
+		return XiongDi;
+	}
+		
+	else if (GetWuXingKe(wxValue) == ebWx)
+	{
+		// 我克者妻财
+		return QiCai;
+	}
+	else if (GetWuXingSheng(wxValue) == ebWx)
+	{
+		// 我生者子孙
+		return ZiSun;
+	}
+	else if (GetWuXingKe(ebWx) == wxValue)
+	{
+		// 克我者官鬼
+		return GuanGui;
+	}
+	else if (GetWuXingSheng(ebWx) == wxValue)
+	{
+		// 生我者父母
+		return FuMu;
+	}
+		 
+	return RelativeMax;
+}
 // 获取地支相合
 EarthlyBranch GetEarthlyBranchHe(EarthlyBranch value)
 {
@@ -863,10 +895,16 @@ void GetHexagramProperty(XXInfo * pxxInfo, HexagramProperty * majorHex, Hexagram
 				break;
 			}
 		}
+		// 根据主卦五行属性，计算变卦六亲
+		for (int i = 0; i < 6; i++)
+		{
+			subHex->xxSymbolInfo[i].xxRelative = GetSixRelativeByWuXing(majorHex->wxName, subHex->xxSymbolInfo[i].tgdz.ebInfo);
+		}
 	}
 	else
 		subHex->hexagram = HEX_Max;
 }
+
 
 // 六兽
 SixAnimal GetSixAnimalByHeavenlySteam(HeavenlySteam value)

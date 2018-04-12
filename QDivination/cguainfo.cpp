@@ -9,6 +9,8 @@ CGuaInfo::CGuaInfo(XXInfo * xxInfo, CDateTime * dtTime) : m_tdTime(dtTime)
 		m_xxInfo.xxSymbol[i] = xxInfo->xxSymbol[i];
 	GetHexagramProperty(&m_xxInfo, &m_majorHex, &m_subHex);
 	m_animalInfo = GetSixAnimalInfo(m_tdTime->GetTDDate().tdDay);
+	GetXunKong(m_tdTime->GetTDDate().tdDay, &m_k1, &m_k2);
+
 }
 
 
@@ -40,12 +42,14 @@ std::string CGuaInfo::getGuaInfo()
 	str.append(tmp);
 	memset(tmp, 0, sizeof(tmp));
 
-	sprintf(tmp, "月日：%s%s年 %s%s月 %s%s日\n", GetHeavenlyName(m_tdTime->GetTDDate().tdYear.hsInfo).c_str(),
+	sprintf(tmp, "月日：%s%s年 %s%s月 %s%s日 (日空 %s%s)\n", GetHeavenlyName(m_tdTime->GetTDDate().tdYear.hsInfo).c_str(),
 		GetEarthlyName(m_tdTime->GetTDDate().tdYear.ebInfo).c_str(),
 		GetHeavenlyName(m_tdTime->GetTDDate().tdMonth.hsInfo).c_str(),
 		GetEarthlyName(m_tdTime->GetTDDate().tdMonth.ebInfo).c_str(),
 		GetHeavenlyName(m_tdTime->GetTDDate().tdDay.hsInfo).c_str(),
-		GetEarthlyName(m_tdTime->GetTDDate().tdDay.ebInfo).c_str());
+		GetEarthlyName(m_tdTime->GetTDDate().tdDay.ebInfo).c_str(),
+		GetEarthlyName(m_k1).c_str(),
+		GetEarthlyName(m_k2).c_str());
 
 	str.append(tmp);
 
@@ -129,7 +133,7 @@ static std::string guaGong[] = {
 };
 std::string CGuaInfo::getGuaGong(Hexagram value)
 {
-	int x = (int)(value) % 8;
+	int x = (int)(value) / 8;
 	return guaGong[x];
 }
 

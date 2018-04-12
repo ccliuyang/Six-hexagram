@@ -276,6 +276,7 @@ WuXing GetWuXingKe(WuXing value);
 // 六亲相生相克
 SixRelative GetSixRelativeSheng(SixRelative value);
 SixRelative GetSixRelativeKe(SixRelative value);
+SixRelative GetSixRelativeByWuXing(WuXing wxValue, EarthlyBranch ebValue);
 
 // 地支相合相冲
 EarthlyBranch GetEarthlyBranchHe(EarthlyBranch value);

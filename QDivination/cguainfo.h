@@ -24,4 +24,8 @@ private:
 	XXInfo			 m_xxInfo;		// 卦爻信息
 	CDateTime		 *m_tdTime;		// 天干地支日期
 	SixAnimalInfo	m_animalInfo;	// 六兽信息
+	EarthlyBranch m_k1;	// 日空
+	EarthlyBranch m_k2; // 日空
+
+
 };
